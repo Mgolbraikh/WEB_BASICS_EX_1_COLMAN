@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="MainPage.css" type="text/css" media="screen" />
 </head>
 <body>
+        
+    <!-- B : Play audion in the start of the page -->
+
+<audio autoplay>
+    <source src="music/all_of_the_lights.mp3" type="audio/mpeg" />
+</audio>
 	<header>
 		<h1>Ha-Blog Shel Shauli</h1>
 	</header>
@@ -26,16 +32,47 @@
 		</header>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
         <img src="images/intro_shauli.png" alt="Shauli" />
-    
-    <section id="SearchPost">
-        <!-- task A : search posts with params-->
-        
-    </section>
-	
     </section>
 	<div id="content">
 		<div id="mainContent">
-			<section>
+            <section id="SearchPost">
+                <!-- task A : search posts with params-->
+            <form action="action_page.php">    
+                <header>
+                    <h2>Search:</h2>
+                </header>
+                <!-- A.1 : by date -->                
+                <p>  
+                <label for="name">Date From:</label>
+                  <input type="from_date_search" name="from">
+                    <label for="name">Date From:</label>  
+                    <input type="end_date_search" name="end"> 
+                </p>
+
+                   <!-- A.2 : by name -->
+                <p>
+					<label for="name">Name</label>
+					<input name="name" id="name" type="text" required />
+				</p>
+                <!-- A.3 : by email -->
+                <p>
+					<label for="email">E-mail</label>
+					<input name="email" id="email" type="email" required />
+				</p>
+                <!-- A.4 : by text from the post -->
+               	<p>
+					<label for="Words in comments">Comment</label>
+					<textarea name="words_in_comments" id="words_in_comments" required></textarea>
+				</p>
+                <!-- A.5 : by number of comments -->
+               	<p>
+                      <label for="Number of comments">Number of comments</label>
+					  <input type="range" name="Number of comments" id="Number_of_comments" min="0" max="10">
+                      <input type="submit" value="Send">
+				</p>
+            </form>   
+            </section>
+            <section>
 				<article class="blogPost">
 					<header>
 						<h2>This is the title of a blog post</h2>
