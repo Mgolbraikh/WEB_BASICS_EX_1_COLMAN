@@ -13,6 +13,13 @@ header, footer, section, aside, nav, article {
 	display: block;
 }
 
+/* adding my font family */
+
+@font-face {
+   font-family: myOutSideFont;
+   src: url(sansation_light.woff);
+}
+
 body {
 	margin: 0 auto;
 	padding: 22px 0;
@@ -20,9 +27,17 @@ body {
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: #F0F0F0;
 }
-
-h1, h2 {
+ 
+h2 {
 	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+/* D: adding shadow to shauli */
+h1 {
+    text-shadow: 3px 3px #DDDDDD;
+    font-size: 28px;
 	line-height: 44px;
 	padding: 22px 0;
 }
@@ -84,8 +99,23 @@ nav {
 				padding-left: 33px;
 				text-align: left;
 				background: url("images/rss.png") left center no-repeat;
-			}
+                text-align:center;
+                -webkit-transition: all 2s ease-in-out;
+                -moz-transition: all 2s ease-in-out;
+                -ms-transition: all 2s ease-in-out;
+                transition: all 2s ease-in-out;
+                }
+            
+            
+            
 
+            ul#navigation li.subscribe a:hover
+            {   
+                -webkit-transform:rotate(720deg) scale(2,2);
+                -moz-transform:rotate(720deg) scale(2,2);
+                -ms-transform:rotate(720deg) scale(2,2);
+                transform:rotate(720deg) scale(2,2);
+            }
 
 /*------------------------------
 =INTRODUCTION
@@ -192,7 +222,8 @@ aside section {
 ------------------------------*/
 .blogPost header p, .blogPost header p a {
 		font-size: 14px;
-		font-style: italic;
+		/*font-style: italic;*/
+        font-family:  myOutSideFont;
 		color: #777;
 	}
 	
@@ -209,6 +240,9 @@ aside section {
 	/* Column-gap not implemented yet */
 	-moz-column-gap: 22px;
 	-webkit-column-gap: 22px;
+    
+    /* font type*/
+    font-family:  myOutSideFont;
 }
 
 .blogPost img {
